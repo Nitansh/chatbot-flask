@@ -1,12 +1,13 @@
-# chatbot-flask
+# Chatbot-flask
 Chatbot application to expose chatbot apis
 
 # Install python 3
 https://www.python.org/downloads/
 
 # Install virtualenv
-git clone git://github.com/davidmarble/virtualenvwrapper-win.git
-python setup.py install
+`git clone git://github.com/davidmarble/virtualenvwrapper-win.git`
+
+`python setup.py install`
 
 # Steps to run flask API
 - Create virtual environment 

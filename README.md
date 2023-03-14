@@ -17,5 +17,5 @@ https://www.python.org/downloads/
 - Install Dependencies
   `pip install -r requirements.txt`
 - Run Apllication using 
-  `flask app`
+  `flask run`
 

@@ -1,16 +1,21 @@
 import time
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS, cross_origin
 
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
+
+import mimetypes
 
 time.clock = time.time
 
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
+
+mimetypes.add_type('application/javascript', '.js')
+mimetypes.add_type('text/css', '.css')
 
 CHATBOT = ChatBot(
     "Chatpot",
@@ -22,6 +27,10 @@ CHATBOT = ChatBot(
     )
 
 TRAINER = ListTrainer(CHATBOT)
+
+@app.route('/', methods=['GET'])
+def root():
+    return render_template('index.html') # Return index.html 
 
 @app.route('/query',  methods = ['POST'])
 @cross_origin()

@@ -19,3 +19,7 @@ https://www.python.org/downloads/
 - Run Apllication using 
   `flask run`
 
+
+# Deployment to Heroku
+
+https://blog.logrocket.com/build-deploy-flask-app-using-docker/

@@ -14,9 +14,6 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-mimetypes.add_type('application/javascript', '.js')
-mimetypes.add_type('text/css', '.css')
-
 CHATBOT = ChatBot(
     "Chatpot",
     logic_adapters=[
@@ -31,6 +28,11 @@ TRAINER = ListTrainer(CHATBOT)
 @app.route('/', methods=['GET'])
 def root():
     return render_template('index.html') # Return index.html 
+
+@app.route('/static/', methods=['GET'])
+def static1():
+    return render_template('index.html') # Return index.html 
+
 
 @app.route('/query',  methods = ['POST'])
 @cross_origin()

@@ -13,9 +13,6 @@ RUN pip install --trusted-host=pypi.org --trusted-host=files.pythonhosted.org --
 # copy every content from the local file to the image
 COPY . /app
 
-EXPOSE 5000
-ENV PORT 5000
-
 # configure the container to run in an executed manner
 ENTRYPOINT [ "python" ]
 

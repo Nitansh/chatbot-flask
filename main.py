@@ -8,6 +8,9 @@ from chatterbot.trainers import ListTrainer
 
 import mimetypes
 
+mimetypes.add_type('application/javascript', '.js')
+mimetypes.add_type('text/css', '.css')
+
 time.clock = time.time
 
 app = Flask(__name__)
